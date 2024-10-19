@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+  overflow-x: hidden; 
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+*{
+  margin: 0 ;
+  padding: 0 ;
+}
+
+:root {
+  --neon-blue: #00f0ff; /* Bleu néon brillant */
+}
+header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+margin: 0;
+padding: 10px;
+justify-content: space-around;
+background-color: #000000;
+z-index: 1000;
+gap: 20px;
+}
+.aligncenter{
+  align-items: center;
+}
+.legoat{
+
+ text-decoration: none;
+ text-align: center;
+}
+.h1-1{
+ font-size: 20px;
+ margin-top: 15px;
+ margin-right: 70px;
+}
+.nav-bar{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.nav-bar li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+ box-sizing: border-box;
+ transition: background-color 0.3s ease;
+}
+.nav-bar li a.active{
+  color: #00f0ff;
+}
+
+.nav-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slideshow {
+  position: relative;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideAnimation 12s infinite;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+@keyframes slideAnimation {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.h1-accueil{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0;
+  font-size: 60px;
+  padding-bottom: 20px;
+  color: rgba(23, 191, 221, 0.918);
+}
+p{
+  font-size: 20px;
+  line-height: 1.5em;
+}
+h1{
+  color: rgba(23, 191, 221, 0.918);
+  font-size: 5rem;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h2{
+  color: rgba(23, 191, 221, 0.918);
+  font-size: 5rem;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.apro p{
+  margin-top: 140px;
+}
+.experience h1{
+  margin-bottom: 60px;
+}
+.skills h1{
+  margin-bottom: 50px;
+}
+.skills p{
+  color: #fff;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-align: start;
+}
+.proj h1{
+  margin-bottom: 70px;
+}
+/* Appliquer le style rond à l'image */
+.boxed img {
+  width: 300px; 
+  height: 300px; 
+  background-color: #00f0ff;
+  border-radius: 50%; 
+  object-fit: cover; 
+  box-shadow: 0 0 60px var(--neon-blue); 
+}
+
+
+.w40{
+  width: 40%;
+  font-size: 2em;
+  }
+  .flex{
+    display: flex;
+  }
+  .w60{
+    width: 60%;
+    line-height: 1.5em;
+
+  }
+.boxed{
+  max-width: 1280px;
+  margin-inline: auto ;
+}
+
+.section{
+  padding: 100px 0;
+}
+.apro{
+  background-image: url(image/fond.noir.png);
+  color: white;
+}
+.experience{
+  background-image: url(image/fond.noir.png);
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+.skills{
+  background-image: url(image/fond.noir.png);
+  color: rgb(0, 0, 0);
+}
+.w25{
+  width: 25%;
+}
+.skill {
+  background-color: floralwhite;
+  border-radius: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.3s ease; 
+  display: inline-block;
+}
+.skill:hover {
+  background-color:var(--neon-blue) 
+}
+.skill img {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 50%; 
+  padding: 10px;
+  background-color: white; 
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.skill:hover img {
+  transform: scale(0.6); 
+  background-color: white; 
+}
+
+.skill h3 {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: black;
+}
+
+.skills button {
+  background: linear-gradient(135deg, #6a00ff, #00f0ff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom:40px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  margin-top: 50px;
+}
+
+.skills button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4) ;
+}
+
+.skills button:focus {
+  outline: none;
+}
+
+.gap20{
+  gap: 7px;
+}
+.proj{
+  background-image: url(image/fond.noir.png);
+  color: white;
+} 
+.w32{
+  width: 32%;
+}
+.space-between{
+  justify-content: space-between;
+}
+.flex .projets:first-child {
+  margin-left: 20px; /* Ajuste selon tes besoins */
+}
+
+.flex .projets:last-child {
+  margin-right: 20px; /* Ajuste selon tes besoins */
+}
+.projets {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 250px; /* Ajuste en fonction de la taille de tes blocs */
+  height: 250px; /* Fixe la hauteur de tes blocs */
+  background: linear-gradient(100deg, #6a00ff, #00f0ff);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.projet a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+.projets img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+  border-radius: 30px;
+}
+.projets h3{
+  position:absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  white-space: normal;
+  opacity: 0;
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.projets .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  transition: background-color 0.5s ease;
+  border-radius: 20px;
+  z-index: 1; 
+}
+.projets:hover h3{
+  opacity: 1;
+}
+.projets:hover img{
+  filter: brightness(40%);
+  transform: scale(2)rotate(10deg);
+  opacity: 0.8;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.xp-container{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 20px;
+  transition:all 0.3s ease;
+}
+.parcours-box {
+  display: flex;
+  flex-direction: column; /* Aligne verticalement les éléments dans la boîte */
+  align-items: center; /* Centre les éléments horizontalement */
+  justify-content: space-between; /* Répartit uniformément les éléments */
+  background-color: grey;
+  border-radius: 30px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border: 4px solid var(--neon-blue);
+  box-shadow: 0 0 45px var(--neon-blue);
+  color: black;
+}
+.parcours-box h3 {
+  font-size: 2rem ;
+  margin: 10px 0;
+}
+.fa-solid.fa-graduation-cap {
+  font-size: 4rem
+}
+
+.parcours-box img {
+  width: 15%;
+  margin-top: 10px;
+}
+.info-parcourss {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.xp-container :hover{
+  transform: scale(1.02);
+}
+.trics{
+  text-align: center;
+}
+.contact{
+  background-image: url(image/img.png);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.formulaire {
+  display: flex;
+  flex-direction: column; /* Organise les champs en colonne */
+  width: 100%; /* Utilise la largeur disponible */
+  align-items: center;
+}
+
+.input-box{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.input-box input{
+  margin-right: 10px;
+  width: 70%;
+  padding: 15px;
+  border-radius: 25px;
+  outline: none;
+  background-color: transparent;
+  border: 4px solid rgba(255, 255, 255 ,0.2);
+  color: white;
+  padding-right: 40px;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+ input::placeholder{
+  color: #fff;
+  opacity: 1;
+  text-align: left;
+}
+textarea{
+  background-color: transparent;
+  border-radius: 25px;
+  width: 70%;
+  color: white;
+  outline: none;
+  border: 4px solid rgba(255, 255, 255 ,0.2);
+  padding:15px;
+  padding-right: 60px;
+}
+textarea::placeholder{
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contact i{
+  color: #fff;
+}
+.contact p{
+  color: #fff;
+  margin: 0;
+}
+.ct-icon{
+  margin-top: -250px;
+  margin-left:700px ;
+  align-items: center;
+}
+.ct-btn{
+  width: 100%;
+  max-width: 200px;
+  padding: 15px;
+  border-radius: 25px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.5s;
+}
+.ct-btn:hover{
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255 ,0.2);
+  color: #fff;
+}
+.contact h1{
+  color: #fff;
+  margin-bottom: 80px;
+}
+footer {
+  background-image: url(image/fond.noir.png); 
+  color: white; 
+  padding: 20px 0; 
+  text-align: center; 
+  position: relative; 
+  bottom: 0; 
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  font-size: 15px; 
+}
+
+.footer-bottom{
+  color: white;
+  font-size: 5px;
+}
+
+.footer-content {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
+  color: white;
+  font-size: 15px; 
+}
+
+.footer-contact a,
+.footer-links a {
+  color: white;
+  font-size: 15px; 
+  text-decoration: none;
+}
+.footer-social{
+font-size: 15px;
+text-align: center;
+align-items: center ;
+margin-right: 100px;
+}
+
+.footer-links a:hover {
+  color: var(--neon-blue); 
+}
+.footer-contact{
+  align-items: center;
+  text-align: center;
+}
+footer p{
+  font-size: 15px;
+}
+
+.footer-contact :hover{
+  color: var(--neon-blue);
+}
+.footer-social i{
+  text-decoration: none;
+  color: white;
+}
+/* Réactivité pour les tablettes */
+@media (max-width: 768px) {
+  body, html {
+    margin: 0; /* Supprime toute marge par défaut */
+    padding: 0; /* Supprime tout padding */
+  }
+
+  .boxed, .section {
+    padding: 20px;
+    margin-left: 0; /* Supprime l'espace à gauche */
+    margin-right: 0; /* Supprime l'espace à droite */
+  }
+
+  .nav-bar {
+    padding: 10px;
+    margin-left: 0; /* Supprime l'espace à gauche */
+    margin-right: 0; /* Supprime l'espace à droite */
+  }
+
+  .projets {
+    margin-left: 0; /* Supprime l'espace à gauche */
+    margin-right: 0; /* Supprime l'espace à droite */
+    margin-bottom: 20px; /* Ajoute de l'espace en bas */
+  }
+
+  h1, h2 {
+    margin-left: 0; /* Supprime l'espace à gauche */
+    margin-right: 0; /* Supprime l'espace à droite */
+  }
+
+  .skill {
+    transition: background-color 0.3s ease; 
+  }
+  
+  .skill:hover {
+    background-color: var(--neon-blue);
+  }
+  
+  .skill img {
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+  }
+  
+  .skill:hover img {
+    transform: scale(0.6); 
+  }
+
+  .projets {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%; /* Prend toute la largeur disponible */
+    height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
+    background: linear-gradient(100deg, #6a00ff, #00f0ff);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .projets:hover {
+    transform: scale(1.05); /* Agrandit légèrement le projet au survol */
+  }
+
+  .projets img {
+    width: 100%;
+    height: auto; /* Ajuste la hauteur automatiquement */
+    object-fit: cover;
+    transition: 0.5s ease;
+    border-radius: 30px;
+  }
+
+  .projets h3 {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    white-space: normal;
+    opacity: 0;
+    transition: 0.5s ease;
+    text-align: center;
+  }
+
+  .projets:hover h3 {
+    opacity: 1; /* Affiche le titre au survol */
+  }
+
+  .projets:hover img {
+    filter: brightness(40%);
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+    opacity: 0.8;
+  }
+}
+
+/* Réactivité pour les smartphones */
+@media (max-width: 480px) {
+  body, html {
+    margin: 0; /* Supprime toute marge par défaut */
+    padding: 0; /* Supprime tout padding */
+  }
+
+  .boxed, .section {
+    padding: 20px;
+    margin-left: 0; /* Supprime l'espace à gauche */
+    margin-right: 0; /* Supprime l'espace à droite */
+  }
+
+  .nav-bar {
+    padding: 15px;
+    margin-left: 0; /* Supprime l'espace à gauche */
+    margin-right: 0; /* Supprime l'espace à droite */
+  }
+
+  .projets {
+    margin-left: 0; /* Supprime l'espace à gauche */
+    margin-right: 0; /* Supprime l'espace à droite */
+    margin-bottom: 20px; /* Ajoute de l'espace en bas */
+  }
+
+  h1, h2 {
+    margin-left: 0; /* Supprime l'espace à gauche */
+    margin-right: 0; /* Supprime l'espace à droite */
+  }
+
+  .formulaire, .input-box, textarea {
+    padding: 0 10px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  .skill {
+    transition: background-color 0.3s ease; 
+  }
+  
+  .skill:hover {
+    background-color: var(--neon-blue);
+  }
+
+  .skill img {
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+  }
+  
+  .skill:hover img {
+    transform: scale(0.6); 
+  }
+
+  .projets {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%; /* Prend toute la largeur disponible */
+    height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
+    background: linear-gradient(100deg, #6a00ff, #00f0ff);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px; /* Ajoute de l'espace en bas */
+  }
+
+  .projets:hover {
+    transform: scale(1.05); /* Agrandit légèrement le projet au survol */
+  }
+
+  .projets img {
+    width: 100%;
+    height: auto; /* Ajuste la hauteur automatiquement */
+    object-fit: cover;
+    transition: 0.5s ease;
+    border-radius: 30px;
+  }
+
+  .projets h3 {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    white-space: normal;
+    opacity: 0;
+    transition: 0.5s ease;
+    text-align: center;
+  }
+
+  .projets:hover h3 {
+    opacity: 1; /* Affiche le titre au survol */
+  }
+
+  .projets:hover img {
+    filter: brightness(40%);
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+    opacity: 0.8;
+  }
+}
