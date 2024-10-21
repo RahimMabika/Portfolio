@@ -568,10 +568,14 @@ footer p{
 
 
 @media (max-width: 810px){
-  body, html {
-    margin: 0; 
-    padding: 0; 
-  }
+ html, body {
+  overflow-x: hidden; 
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--navy);
+  margin: 0,
+  padding: 0; 
+}
   .nav-bar {
     position: absolute;
     top: 60px;
