@@ -577,7 +577,7 @@ footer p{
   overflow-x: hidden; 
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
-  background-color: var(--navy)!important;
+  background-color: rgb(1, 1, 24);
   margin: 0;
   padding: 0; 
 }
