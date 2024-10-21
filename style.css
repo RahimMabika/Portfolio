@@ -568,12 +568,17 @@ footer p{
 
 
 @media (max-width: 810px){
+  :root {
+  --neon-blue: #00f0ff; 
+  --navy : #001;
+  --neon-green: #16ff00;
+}
  html, body {
   overflow-x: hidden; 
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
   background-color: var(--navy);
-  margin: 0,
+  margin: 0;
   padding: 0; 
 }
   .nav-bar {
