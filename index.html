@@ -261,9 +261,12 @@
                 <p>&copy; 2024 Rahim MABIKA. Tous droits réservés.</p>
             </div>
         </footer>
-        <script type="text/javascript">
+        
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+      <script type="text/javascript">
     (function() {
-      
+       
         emailjs.init("PuALVeLySgys2EbDg"); 
     })();
 </script>
@@ -271,13 +274,15 @@
 <script type="text/javascript">
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); 
-         emailjs.sendForm('service_9bvnczd', 'template_407u7lb', this)
+
+     
+        emailjs.sendForm('service_9bvnczd', 'template_407u7lb', this)
             .then(function() {
                 alert('Message envoyé avec succès !');
             }, function(error) {
                 alert('Erreur lors de l\'envoi : ' + JSON.stringify(error));
             });
-    });     
+    });
 </script>
         <script>
              AOS.init({
