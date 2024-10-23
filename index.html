@@ -228,16 +228,16 @@
             <div id="contact" class="section contact">
                 <h1 data-aos="fade-down">Contactez-moi</h1>
             <div data-aos="fade-left" class="formulaire">
-                <div class="input-box">
-                    <input type="name" placeholder="Nom">
-                </div>
-                <div class="input-box">
-                    <input type="email" placeholder="E-mail">
-                </div>
-                <div class="input-box">
-                    <textarea name="text" placeholder="Message"></textarea>
-                </div>
-                <button class="ct-btn">Envoyer</button>
+               <div class="input-box">
+                        <input type="text" name="from_name" placeholder="Nom" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="reply_to" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="ct-btn">Envoyer</button>
             </div>
             </div> 
         </section>
@@ -259,7 +259,26 @@
                 <p>&copy; 2024 Rahim MABIKA. Tous droits réservés.</p>
             </div>
         </footer>
-        
+        <script type="text/javascript">
+    (function() {
+        // Initialiser EmailJS avec ton USER ID
+        emailjs.init("PuALVeLySgys2EbDg"); // Remplace par ton USER ID EmailJS
+    })();
+</script>
+
+<script type="text/javascript">
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêcher le rechargement de la page
+
+        // Envoi du formulaire avec EmailJS
+        emailjs.sendForm('service_9bvnczd', 'My Default Template', this)
+            .then(function() {
+                alert('Message envoyé avec succès !');
+            }, function(error) {
+                alert('Erreur lors de l\'envoi : ' + JSON.stringify(error));
+            });
+    });
+</script>
         <script>
              AOS.init({
         once: false, 
