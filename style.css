@@ -4,7 +4,7 @@ html, body {
   overflow-x: hidden; 
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
-  background-color: var(--navy);
+  background-color: rgb(3, 3, 29);
 }
 *{
   margin: 0 ;
@@ -577,7 +577,7 @@ footer p{
   overflow-x: hidden; 
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
-  background-color: rgb(1, 1, 24);
+  background-color: rgb(3, 3, 29);
   margin: 0;
   padding: 0; 
 }
