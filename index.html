@@ -229,7 +229,7 @@
                 <h1 data-aos="fade-down">Contactez-moi</h1>
             <div data-aos="fade-left" class="formulaire">
                 <form id="contactForm">
-               <div class="input-box">
+                    <div class="input-box">
                         <input type="text" name="from_name" placeholder="Nom" required>
                     </div>
                     <div class="input-box">
@@ -263,23 +263,21 @@
         </footer>
         <script type="text/javascript">
     (function() {
-        // Initialiser EmailJS avec ton USER ID
-        emailjs.init("PuALVeLySgys2EbDg"); // Remplace par ton USER ID EmailJS
+      
+        emailjs.init("PuALVeLySgys2EbDg"); 
     })();
 </script>
 
 <script type="text/javascript">
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Empêcher le rechargement de la page
-
-        // Envoi du formulaire avec EmailJS
-        emailjs.sendForm('service_9bvnczd', 'template_407u7lb', this)
+        event.preventDefault(); 
+         emailjs.sendForm('service_9bvnczd', 'template_407u7lb', this)
             .then(function() {
                 alert('Message envoyé avec succès !');
             }, function(error) {
                 alert('Erreur lors de l\'envoi : ' + JSON.stringify(error));
             });
-    });
+    });     
 </script>
         <script>
              AOS.init({
@@ -335,19 +333,19 @@
         }
     });
 
-    // Supprime la classe active de tous les liens
+
     navLinks.forEach(link => link.classList.remove('active'));
 
-    // Ajoute la classe active au lien correspondant
+  
     if (activeIndex !== -1) {
         navLinks[activeIndex].classList.add('active');
     }
 }
 
-// Écoute l'événement de défilement
+
 window.addEventListener('scroll', changeActiveNav);
 
-// Appelle la fonction une fois au chargement de la page pour gérer le cas où la page est chargée en bas
+
 changeActiveNav();
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
@@ -356,24 +354,23 @@ function showSlide(index) {
   slides.forEach((slide, i) => {
     slide.classList.remove('active');
     if (i === index) {
-      slide.classList.add('active'); // Active la diapositive courante
+      slide.classList.add('active'); 
     }
   });
 }
 
 function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length; // Boucle sur les diapositives
+  currentSlide = (currentSlide + 1) % slides.length; 
   showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 5000); // Change de diapositive toutes les 5 secondes
-
+setInterval(nextSlide, 5000);
 
         </script>
         <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navBar = document.querySelector('.nav-bar');
-        const menuItems = document.querySelectorAll('.nav-bar a'); // Sélectionne tous les liens dans la barre de navigation
+        const menuItems = document.querySelectorAll('.nav-bar a'); 
         
         menuToggle.addEventListener('click', () => {
             navBar.classList.toggle('active');
