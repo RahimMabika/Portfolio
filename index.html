@@ -228,6 +228,7 @@
             <div id="contact" class="section contact">
                 <h1 data-aos="fade-down">Contactez-moi</h1>
             <div data-aos="fade-left" class="formulaire">
+                <form id="contactForm">
                <div class="input-box">
                         <input type="text" name="from_name" placeholder="Nom" required>
                     </div>
@@ -238,6 +239,7 @@
                         <textarea name="message" placeholder="Message" required></textarea>
                     </div>
                     <button type="submit" class="ct-btn">Envoyer</button>
+                </form>
             </div>
             </div> 
         </section>
@@ -271,7 +273,7 @@
         event.preventDefault(); // Empêcher le rechargement de la page
 
         // Envoi du formulaire avec EmailJS
-        emailjs.sendForm('service_9bvnczd', 'My Default Template', this)
+        emailjs.sendForm('service_9bvnczd', 'template_407u7lb', this)
             .then(function() {
                 alert('Message envoyé avec succès !');
             }, function(error) {
