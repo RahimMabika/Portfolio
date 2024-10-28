@@ -28,6 +28,7 @@
                         <li><a href="#accueil" class="nav-link" id="link-accueil">Accueil</a></li>
                         <li><a href="#apropos" class="nav-link" id="link-apropos">À Propos</a></li>
                         <li><a href="#parcours" class="nav-link" id="link-parcours">Parcours</a></li>
+                         <li><a href="#compétences" class="nav-link" id="link-compétences">Compétences</a></li>
                         <li><a href="#projets" class="nav-link" id="link-projets">Projets</a></li>
                         <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
                     </ul>
@@ -332,7 +333,7 @@
 
     sections.forEach((section, i) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top < window.innerHeight) {
+       if (rect.top <= window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
             activeIndex = i; 
         }
     });
