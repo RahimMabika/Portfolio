@@ -28,6 +28,24 @@ justify-content: space-around;
 z-index: 1000;
 gap: 20px;
 }
+.vt{
+  color: #fff;
+}
+.vtp{
+  margin-left: 20px;
+}
+.vth{
+  margin-left: 20px;
+}
+.vtt{
+  font-size: 5rem;
+  color: var(--neon-green);
+  font-weight: 700;
+  margin-top: 50px;
+}
+.spacevth1 {
+  margin-bottom: 150px;
+}
 .proj{
   color: #fff;
 }
@@ -391,6 +409,28 @@ border-color: transparent transparent transparent #fff;
   transition: 0.5s ease;
   text-align: center;
 }
+.proj button {
+  background: linear-gradient(135deg, #6a00ff, #00f0ff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom:40px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  margin-top: 50px;
+}
+
+.proj button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4) ;
+}
+
+.proj button:focus {
+  outline: none;
+}
 
 .projets .overlay {
   position: absolute;
@@ -568,19 +608,12 @@ footer p{
 
 
 @media (max-width: 810px){
-  :root {
-  --neon-blue: #00f0ff; 
-  --navy : #001;
-  --neon-green: #16ff00;
-}
- html, body {
-  overflow-x: hidden; 
-  font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
-  background-color: rgb(3, 3, 29);
-  margin: 0;
-  padding: 0; 
-}
+  body, html {
+    margin: 0; 
+    padding: 0; 
+    background-color: rgb(3, 3, 29);
+    
+  }
   .nav-bar {
     position: absolute;
     top: 60px;
@@ -673,6 +706,17 @@ footer p{
 .acc p {
   font-size: 1rem; 
   text-align: center; 
+}
+.acc img {
+  position: absolute;
+  width: 300px; 
+  height: 300px; 
+  background-color: var(--neon-green);
+  border-radius: 50%; 
+  object-fit: cover; 
+  box-shadow: 0 0 60px var(--neon-green); 
+  left: 900px;
+  top: 250px;
 }
 h1{
   font-size: 2rem;
