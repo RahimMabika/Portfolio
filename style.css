@@ -28,20 +28,35 @@ justify-content: space-around;
 z-index: 1000;
 gap: 20px;
 }
-.vt{
-  color: #fff;
+.vt {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
 }
-.vtp{
-  margin-left: 20px;
+.vt a{
+  text-decoration: none;
+  color: #72c8ff;
 }
-.vth{
-  margin-left: 20px;
+.vt a:hover{
+    text-decoration: underline;
 }
-.vtt{
-  font-size: 5rem;
-  color: var(--neon-green);
-  font-weight: 700;
-  margin-top: 50px;
+.vtt {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.vth {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+.vtp {
+  margin: 0;
+  font-size: 16px;
 }
 .spacevth1 {
   margin-bottom: 150px;
